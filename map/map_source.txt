@@ -1,0 +1,15 @@
+Map source and license
+----------------------
+
+http://maplibrary.org/stacks/gadm/index.php
+
+GADM is a database of the location of the world's administrative areas. 
+
+Administrative areas in this database are countries and lower level subdivisions such as 
+provinces, departments, districts etc. GADM has been developed as part of the BioGeoMancer project. 
+
+It was partly funded by the Gordon and Betty Moore foundation. The work was done at the Univeristy of California, 
+Berkeley, Museum of Vertebrate Zoology, and the International Rice Research Institute by Robert Hijmans, 
+Nell Garcia, Julian Kapoor, Arnel Rala, Aileen Maunahan, and John Wieczorek.
+
+This work is licensed under a Creative Commons Attribution-Noncommercial-Share Alike 3.0 United States License. 
