@@ -3,7 +3,7 @@
 #' @param x a SpatialGridDataFrame
 #' 
 #' @export
-contour <- function(x, nlevels =12, ...){
+quickContour <- function(x, nlevels =12, ...){
   bbm <- basemap("stamen.toner.lite")
   win <- apply(bbox(x), 1, mean)
   cont <- extractContour(x, nlevels = nlevels)
