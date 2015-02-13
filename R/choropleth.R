@@ -33,7 +33,7 @@ choropleth <- function(x, col.by, breaks = 5, alpha = 1, col = NULL, popup = NUL
   col <- gcol[as.numeric(gcut)]
 
   if(is.null(popup)){
-    popup <- znum
+    popup <- paste(col.by, znum, sep=": ")
   }
   
   bbm <- basemap("stamen.toner.lite")
