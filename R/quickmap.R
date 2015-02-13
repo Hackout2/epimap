@@ -19,7 +19,7 @@ quickMap <- function(x, col.by = "", size.by = "", alpha = 1, popup = "", ...){
     col <- x[[col.by]]
     col <- as.numeric(col)
   } else {
-    col <- rep(2, times = dim(x)[1])
+    col <- rep("darkgrey", times = dim(x)[1])
   }
   
   if(size.by %in% names(x)){
@@ -27,6 +27,7 @@ quickMap <- function(x, col.by = "", size.by = "", alpha = 1, popup = "", ...){
     size <- as.numeric(size) + 2
     #col[is.na(size)] <- "darkgrey"
     size[is.na(size)] <- 1
+    size <- (size/max(size))*20
     
   } else {
     size <- 5
