@@ -9,7 +9,7 @@
 #' 
 #' @return a \code{SpatialLinesDataFrame}
 #' 
-extractContour <- function(x, layer = 1, nlevels = 10){
+contour2sp <- function(x, layer = 1, nlevels = 10){
   
   im <- as.image.SpatialGridDataFrame(x, attr = layer)
   cl <- contourLines(im, nlevels = nlevels)
