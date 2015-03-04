@@ -8,7 +8,6 @@
 #' @param popup a character vector providing popup content.
 #' 
 #' @export
-#' 
 quickMap <- function(x, col.by = "", size.by = "", alpha = 1, popup = "", ...){
   if(!class(x) %in% c("SpatialPointsDataFrame",
                       "SpatialPolygonsDataFrame")){
