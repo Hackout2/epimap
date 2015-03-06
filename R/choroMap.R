@@ -1,5 +1,7 @@
-
 #' Basic interactive choropleth
+#' 
+#' This function can be use to quickly generate a choropleth
+#' map from a \code{SpatialPolygonsDataFrame}.
 #' 
 #' @param x a \code{SpatialPolygonsDataFrame}.
 #' @param col.by a column name of x giving values to color polygons.

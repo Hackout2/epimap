@@ -1,5 +1,8 @@
 #' Quickly generate an interactive map
 #' 
+#' This function can be used to quickly generate interactive maps
+#' from a \code{SpatialPointsDataFrame} or a \code{SpatialPolygonsDataFrame}.
+#' 
 #' @param x a \code{SpatialPointsDataFrame} or a \code{SpatialPolygonsDataFrame}.
 #' @param col.by a column name of x giving colors for points or polygons.
 #' @param size.by a column name of x giving the size for the circles.
