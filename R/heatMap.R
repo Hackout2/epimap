@@ -1,6 +1,15 @@
-#' Map interactive contour lines
+#' Interactive heatmaps and contour lines
+#' 
+#' This is a wrapping function to create interactive
+#' heatmaps and contour lines from a SpatialGridDataFrame.
 #' 
 #' @param x a SpatialGridDataFrame
+#' @param bm a character string giving the base map tiles server adress.
+#' Use \code{\link[rleafmap]{bmSource}} to get a list of preconfigured list of server.
+#' @param show.contour a logical stating whether contour lines should be displayed.
+#' @param show.gradient a logical stating whether the heatmap should be displayed.
+#' @param n.levels if \code{show.contour} is \code{TRUE}, number of contour levels.
+#' @param ... other argument to be passed to \code{\link[rleafmap]{writeMap}}
 #' 
 #' @export
 heatMap <- function(x, bm = "stamen.toner.lite",
@@ -18,7 +27,8 @@ heatMap <- function(x, bm = "stamen.toner.lite",
   }
   
   if(show.contour & show.gradient){
-    writeMap(bm, heat.map, cont.map, setView = c(win[2], win[1]), ...)
+    ui <- ui(layers = "topright")
+    writeMap(bm, cont.map, heat.map, interface = ui, setView = c(win[2], win[1]), ...)
   } else {
     if(show.contour){
       writeMap(bm, cont.map, setView = c(win[2], win[1]), ...)
