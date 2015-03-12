@@ -12,7 +12,7 @@ contour2sp <- function(x, layer = 1, nlevels = 10){
   
   im <- as.image.SpatialGridDataFrame(x, attr = layer)
   cl <- contourLines(im, nlevels = nlevels)
-  id <- seq(1, length(cl))
+  id <- seq_len(length(cl))
   mat <- lapply(cl, function(x) cbind(x$x, x$y))
   lin <- lapply(mat, function(x) Line(x))
   lins <- mapply(function(x, y) Lines(x, ID = y), lin, id)
