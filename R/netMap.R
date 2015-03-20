@@ -8,7 +8,7 @@
 #' @param x an \code{igraph} object with at least two vertices attributes \code{"lon"} and \code{"lat"}
 #' giving the longitude and the latitude of each vertex respectively.
 #' @param bm a character string giving the base map tiles server adress.
-#' Use \code{\link[rleafmap]{bmSource}} to get a list of preconfigured list of server.
+#' Use \code{\link[rleafmap]{bmSource}} to get a list of preconfigured servers.
 #' 
 #' @export
 netMap <- function(x, bm = "cartodb.darkmatter.nolab", ...){
