@@ -1,2 +1,4 @@
 misc
 test.R
+^.*\.Rproj$
+^\.Rproj\.user$
