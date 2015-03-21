@@ -37,7 +37,7 @@ graph2sp <- function(x, edges = c("lines", "gc", "arc"), alpha = 45){
           get.vertex.attribute(x, "lat", i))})
   
   if(edges == "gc"){
-    lin <- lapply(lin, function(x) geosphere::gcIntermediate(x[1, ], x[2, ]))
+    lin <- lapply(lin, function(x) geosphere::gcIntermediate(x[1, ], x[2, ], addStartEnd = TRUE))
   }
   if(edges == "arc"){
     lin <- lapply(lin, function(x) arcAngle(x[1, ], x[2, ], alpha = alpha, n = 100))
