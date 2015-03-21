@@ -13,11 +13,16 @@
 #' @export
 netMap <- function(x, bm = "cartodb.darkmatter.nolab", ...){
   bm <- basemap(bm)
-  win <- apply(bbox(x), 1, mean)
-  net.sp <- graph2sp(x)
-  net.map.pt <- spLayer(net.sp[[1]], popup = net.sp[[1]]$name)
-  net.map.li <- spLayer(net.sp[[2]], stroke.lwd=3)
-  writeMap(bm, net.map.pt, net.map.li, setView = c(win[2], win[1]), ...)
+  net.sp <- graph2sp(x, edges = "gc")
+  
+  win <- apply(bbox(net.sp[[1]]), 1, mean)
+  
+  net.map.pt <- spLayer(net.sp[[1]], popup = net.sp[[1]]$name, fill.alpha = 1)
+  net.map.pt2 <- spLayer(net.sp[[1]], popup = net.sp[[1]]$name, fill.alpha = 0.2,
+                         size = 18, stroke = FALSE)
+  net.map.li <- spLayer(net.sp[[2]], stroke.lwd=1, stroke.col = "white")
+  
+  writeMap(bm, net.map.pt, net.map.pt2, net.map.li, setView = c(win[2], win[1]), ...)
 }
 
 
