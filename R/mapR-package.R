@@ -1,8 +1,15 @@
 #' mapR
 #'
+#' @import sp
+#' @import rleafmap
+#' @import igraph
+#' @import geosphere
+#' 
 #' @name mapR
 #' @docType package
 NULL
+
+
 
 #' Cholera Data
 #' 
@@ -10,8 +17,9 @@ NULL
 #' 
 #' @format a list of two \code{SpatialPointsDataFrame}.
 #' \itemize{
-#'    \item chol The location of cholera cases.
-#'    \item pumps The location of pumps.
+#'    \item deaths Cholera Death locations.
+#'    \item deaths.den Cholera deaths density.
+#'    \item pumps Pumps locations.
 #'  }
 #' @source http://blog.rtwilson.com/john-snows-cholera-data-in-more-formats/
 #' @docType data
