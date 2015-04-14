@@ -8,6 +8,7 @@
 #' @param nlevels number of contour levels.
 #' 
 #' @return a \code{SpatialLinesDataFrame}
+#' @export
 contour2sp <- function(x, layer = 1, nlevels = 10){
   
   im <- as.image.SpatialGridDataFrame(x, attr = layer)

@@ -5,5 +5,10 @@ Authors@R: "First Last <first.last@example.com> [aut, cre]"
 Description: What the package does (paragraph)
 Depends:
     R (>= 3.0.2)
+Imports:
+    rleafmap,
+    igraph,
+    sp,
+    geosphere
 License: What license is it under?
 LazyData: true
