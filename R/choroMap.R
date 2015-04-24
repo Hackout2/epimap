@@ -41,8 +41,6 @@ choroMap <- function(x, col.by, breaks = 5, alpha = 1, col = NULL, popup = NULL,
   bbm <- basemap("stamen.toner.lite")
   x.map <- spLayer(x, fill.col = col, fill.alpha = alpha, popup = popup)
   
-  win <- apply(bbox(x), 1, mean)
-
-  writeMap(bbm, x.map,  setView = c(win[2], win[1]), ...)
+  writeMap(bbm, x.map, ...)
 
 }

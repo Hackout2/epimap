@@ -16,7 +16,6 @@ heatMap <- function(x, bm = "stamen.toner.lite",
                     show.contour = TRUE, show.gradient = TRUE,
                     nlevels = 12, ...){
   bm <- basemap(bm)
-  win <- apply(bbox(x), 1, mean)
   
   if(show.contour){
     cont <- contour2sp(x, nlevels = nlevels)
@@ -28,13 +27,13 @@ heatMap <- function(x, bm = "stamen.toner.lite",
   
   if(show.contour & show.gradient){
     ui <- ui(layers = "topright")
-    writeMap(bm, cont.map, heat.map, interface = ui, setView = c(win[2], win[1]), ...)
+    writeMap(bm, cont.map, heat.map, interface = ui, ...)
   } else {
     if(show.contour){
-      writeMap(bm, cont.map, setView = c(win[2], win[1]), ...)
+      writeMap(bm, cont.map, ...)
     }
     if(show.gradient){
-      writeMap(bm, heat.map, setView = c(win[2], win[1]), ...)
+      writeMap(bm, heat.map, ...)
     }
   }
 }

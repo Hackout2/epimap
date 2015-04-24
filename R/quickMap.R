@@ -46,7 +46,6 @@ quickMap <- function(x, col.by = "", size.by = "", alpha = 1, popup = "", ...){
     x.map <- spLayer(x, fill.col = col, fill.alpha = alpha,
                      popup = popup)
   }
-  win <- apply(bbox(x), 1, mean)
   
-  writeMap(bbm, x.map,  setView = c(win[2], win[1]), ...)
+  writeMap(bbm, x.map, ...)
 }

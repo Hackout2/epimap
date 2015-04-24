@@ -22,8 +22,6 @@ netMap <- function(x, v.size = 5, v.col = 2, bm = "cartodb.darkmatter.nolab", ..
     v.col <- vertex.attributes(x)[[v.col]]
   }
   
-  win <- apply(bbox(net.sp[[1]]), 1, mean)
-  
   net.map.pt <- spLayer(net.sp[[1]], popup = net.sp[[1]]$name,
                         fill.col = v.col, fill.alpha = 1,
                         size = v.size)
@@ -32,7 +30,7 @@ netMap <- function(x, v.size = 5, v.col = 2, bm = "cartodb.darkmatter.nolab", ..
                          size = v.size * 3, stroke = FALSE)
   net.map.li <- spLayer(net.sp[[2]], stroke.lwd=1, stroke.col = "white")
   
-  writeMap(bm, net.map.pt, net.map.pt2, net.map.li, setView = c(win[2], win[1]), ...)
+  writeMap(bm, net.map.pt, net.map.pt2, net.map.li, ...)
 }
 
 
