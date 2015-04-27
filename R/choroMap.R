@@ -27,7 +27,7 @@ choroMap <- function(x, col.by, breaks = 5, alpha = 1, col = NULL, popup = NULL,
   }
   
   if(is.null(col)){
-    gcol <- rev(heat.colors(n))  
+    gcol <- rev(heat.colors(n))
   } else {
     gcol <- col
   }

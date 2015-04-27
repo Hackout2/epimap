@@ -19,7 +19,12 @@ quickMap <- function(x, col.by = "", size.by = "", alpha = 1, popup = "", ...){
   
   if(col.by %in% names(x)){
     col <- x[[col.by]]
-    col <- as.numeric(col)
+    if(is.numeric(col)){
+      gcut <- cut(col, breaks = 12)
+      col <- heat.colors(12)[as.numeric(gcut)]
+    } else {
+      col <- as.numeric(col)
+    }
   } else {
     col <- rep("darkgrey", times = dim(x)[1])
   }
@@ -27,7 +32,6 @@ quickMap <- function(x, col.by = "", size.by = "", alpha = 1, popup = "", ...){
   if(size.by %in% names(x)){
     size <- x[[size.by]]
     size <- as.numeric(size) + 2
-    #col[is.na(size)] <- "darkgrey"
     size[is.na(size)] <- 1
     size <- (size/max(size))*20
     
