@@ -4,11 +4,11 @@ Version: 0.1
 Authors@R: "First Last <first.last@example.com> [aut, cre]"
 Description: What the package does (paragraph)
 Depends:
-    R (>= 3.0.2)
-Imports:
+    R (>= 3.0.2),
     rleafmap,
     igraph,
-    sp,
+    sp
+Imports:
     geosphere
 License: What license is it under?
 LazyData: true
