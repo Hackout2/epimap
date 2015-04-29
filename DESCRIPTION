@@ -1,8 +1,10 @@
-Package: mapR
-Title: What the package does (short line)
+Package: epimap
+Title: Interactive maps for epidemiology.
 Version: 0.1
-Authors@R: "First Last <first.last@example.com> [aut, cre]"
-Description: What the package does (paragraph)
+Authors@R: "Hackout2 Map Team <first.last@example.com> [aut, cre]"
+Description: A set of functions to quickly and easily create interactive maps for epidemiology, ecology and so on.
+Designed to work with mapData via sp objects.
+Also implements some functions to convert more complex objects (like contourlines, graphs, ...) into sp object.
 Depends:
     R (>= 3.0.2),
     rleafmap,
@@ -10,5 +12,5 @@ Depends:
     sp
 Imports:
     geosphere
-License: What license is it under?
+License: GPL-2
 LazyData: true
