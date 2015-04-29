@@ -1,4 +1,4 @@
-# mapR
+# epimap
 
 ## Description
 A set of functions to quickly and easily create interactive maps based on Leaflet. Designed to work with `mapData` via `sp` objects. Also implements some functions to convert more complex objects (like contourlines, graphs, ...) into `sp` object.
@@ -7,12 +7,12 @@ A set of functions to quickly and easily create interactive maps based on Leafle
 To install the package you can use `devtools`. You also need to install `rleafmap`.
 
     devtools::install_github("fkeck/rleafmap")
-    devtools::install_github("Hackout2/mapR")
+    devtools::install_github("Hackout2/epimap")
 
 ## Demo
 First, load the package and the cholera dataset.
 
-    library(mapR)
+    library(epimap)
     data(cholera)
 
 The package provides a collection of simple `*Map` functions to easily get interactive maps.
