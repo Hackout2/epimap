@@ -1,11 +1,11 @@
-#' mapR
+#' epimap
 #'
 #' @import sp
 #' @import rleafmap
 #' @import igraph
 #' @import geosphere
 #' 
-#' @name mapR
+#' @name epimap
 #' @docType package
 NULL
 
