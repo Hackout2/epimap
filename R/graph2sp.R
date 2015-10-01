@@ -61,7 +61,7 @@ graph2sp <- function(x, edges = c("lines", "gc", "arc"), alpha = 45){
 #' Compute the arc between two points with its angular distance.
 #' 
 #' @param pt1 a numeric vector of length 2  giving the coordinates (x and y) of the first point.
-#' @param pt1 a numeric vector of length 2  giving the coordinates (x and y) of the second point.
+#' @param pt2 a numeric vector of length 2  giving the coordinates (x and y) of the second point.
 #' @param alpha a numeric giving the value of the central angle (angular distance in degrees).
 #' @param n the number of points to generate.
 #' @param inv a logical. Since there are two solutions, can be used to get the second arc.

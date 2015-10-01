@@ -3,7 +3,7 @@
 #' @import sp
 #' @import rleafmap
 #' @import igraph
-#' @import geosphere
+#' @importFrom geosphere gcIntermediate
 #' 
 #' @name epimap
 #' @docType package

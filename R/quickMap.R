@@ -9,6 +9,7 @@
 #' Only relevant with \code{SpatialPointsDataFrame}
 #' @param alpha a numeric to control the transparency.
 #' @param popup a character vector providing popup content.
+#' @param ... other arguments to be passed to \code{\link[rleafmap]{writeMap}}
 #' 
 #' @export
 quickMap <- function(x, col.by = "", size.by = "", alpha = 1, popup = "", ...){

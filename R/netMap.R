@@ -7,8 +7,11 @@
 #' 
 #' @param x an \code{igraph} object with at least two vertices attributes \code{"lon"} and \code{"lat"}
 #' giving the longitude and the latitude of each vertex respectively.
+#' @param v.size a numeric vector indicating vertices size.
+#' @param v.col a vector of R colors to use for the vertices.
 #' @param bm a character string giving the base map tiles server adress.
 #' Use \code{\link[rleafmap]{bmSource}} to get a list of preconfigured servers.
+#' @param ... additional arguments which can be passed to \code{\link[rleafmap]{writeMap}}.
 #' 
 #' @export
 netMap <- function(x, v.size = 5, v.col = 2, bm = "cartodb.darkmatter.nolab", ...){
@@ -28,7 +31,7 @@ netMap <- function(x, v.size = 5, v.col = 2, bm = "cartodb.darkmatter.nolab", ..
   net.map.pt2 <- spLayer(net.sp[[1]], popup = net.sp[[1]]$name,
                          fill.col = v.col, fill.alpha = 0.2,
                          size = v.size * 3, stroke = FALSE)
-  net.map.li <- spLayer(net.sp[[2]], stroke.lwd=1, stroke.col = "white")
+  net.map.li <- spLayer(net.sp[[2]], stroke.lwd = 1, stroke.col = "white")
   
   writeMap(bm, net.map.pt, net.map.pt2, net.map.li, ...)
 }

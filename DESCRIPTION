@@ -8,10 +8,10 @@ Description:
     Also implements some functions to convert more complex objects (like contourlines, graphs, ...) into sp object.
 Depends:
     R (>= 3.0.2),
+Imports:
+    geosphere,
     rleafmap,
     igraph,
     sp
-Imports:
-    geosphere
 License: GPL-2
 LazyData: true

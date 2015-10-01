@@ -8,8 +8,8 @@
 #' Use \code{\link[rleafmap]{bmSource}} to get a list of preconfigured servers.
 #' @param show.contour a logical stating whether contour lines should be displayed.
 #' @param show.gradient a logical stating whether the heatmap should be displayed.
-#' @param n.levels if \code{show.contour} is \code{TRUE}, number of contour levels.
-#' @param ... other argument to be passed to \code{\link[rleafmap]{writeMap}}
+#' @param nlevels if \code{show.contour} is \code{TRUE}, number of contour levels.
+#' @param ... other arguments to be passed to \code{\link[rleafmap]{writeMap}}
 #' 
 #' @export
 heatMap <- function(x, bm = "stamen.toner.lite",
