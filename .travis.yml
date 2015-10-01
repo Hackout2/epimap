@@ -13,6 +13,5 @@ before_install: echo "options(repos = c(CRAN='http://cran.rstudio.com'))" > ~/.R
 
 r_binary_packages:
 - sp
-- rleafmap
 - igraph
 - geosphere
