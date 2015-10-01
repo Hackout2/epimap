@@ -3,7 +3,7 @@ Title: Interactive maps for epidemiology.
 Version: 0.1
 Authors@R: "Hackout2 Map Team <first.last@example.com> [aut, cre]"
 Description:
-    A set of functions to quickly and easily create interactive maps for epidemiology, ecology and so on.
+    A set of functions to quickly and easily create interactive maps for epidemiology and  ecology.
     Designed to work with mapData via sp objects.
     Also implements some functions to convert more complex objects (like contourlines, graphs, ...) into sp object.
 Depends:
