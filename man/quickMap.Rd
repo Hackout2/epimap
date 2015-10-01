@@ -24,4 +24,10 @@ Only relevant with \code{SpatialPointsDataFrame}}
 This function can be used to quickly generate interactive maps
 from a \code{SpatialPointsDataFrame} or a \code{SpatialPolygonsDataFrame}.
 }
+\examples{
+\dontrun{
+data(cholera)
+quickMap(cholera$deaths, col.by = "Count", size.by = "Count")
+}
+}
 

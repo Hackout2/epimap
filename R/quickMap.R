@@ -11,6 +11,12 @@
 #' @param popup a character vector providing popup content.
 #' @param ... other arguments to be passed to \code{\link[rleafmap]{writeMap}}
 #' 
+#' @examples
+#' \dontrun{
+#' data(cholera)
+#' quickMap(cholera$deaths, col.by = "Count", size.by = "Count")
+#' }
+#' 
 #' @export
 quickMap <- function(x, col.by = "", size.by = "", alpha = 1, popup = "", ...){
   if(!class(x) %in% c("SpatialPointsDataFrame",

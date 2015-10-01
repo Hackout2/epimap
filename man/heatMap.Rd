@@ -25,4 +25,10 @@ Use \code{\link[rleafmap]{bmSource}} to get a list of preconfigured servers.}
 This is a wrapping function to create interactive
 heatmaps and contour lines from a SpatialGridDataFrame.
 }
+\examples{
+\dontrun{
+data(cholera)
+heatMap(cholera$deaths.den)
+}
+}
 

@@ -13,6 +13,16 @@
 #' Use \code{\link[rleafmap]{bmSource}} to get a list of preconfigured servers.
 #' @param ... additional arguments which can be passed to \code{\link[rleafmap]{writeMap}}.
 #' 
+#' @examples
+#' \dontrun{
+#' require(igraph)
+#' pump.adj <- as.matrix(dist(coordinates(cholera$pumps)))
+#' pump.graph <- graph.adjacency(pump.adj < 0.003, diag = FALSE)
+#' V(pump.graph)$lat <- coordinates(cholera$pumps)[, 2]
+#' V(pump.graph)$lon <- coordinates(cholera$pumps)[, 1]
+#' netMap(pump.graph, v.size = 5, width = 500, height = 300)
+#' }
+#' 
 #' @export
 netMap <- function(x, v.size = 5, v.col = 2, bm = "cartodb.darkmatter.nolab", ...){
   bm <- basemap(bm)

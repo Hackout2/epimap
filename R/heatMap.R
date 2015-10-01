@@ -11,6 +11,12 @@
 #' @param nlevels if \code{show.contour} is \code{TRUE}, number of contour levels.
 #' @param ... other arguments to be passed to \code{\link[rleafmap]{writeMap}}
 #' 
+#' @examples
+#' \dontrun{
+#' data(cholera)
+#' heatMap(cholera$deaths.den)
+#' }
+#' 
 #' @export
 heatMap <- function(x, bm = "stamen.toner.lite",
                     show.contour = TRUE, show.gradient = TRUE,
