@@ -16,8 +16,3 @@ r_binary_packages:
 - rleafmap
 - igraph
 - geosphere
-
-notifications:
-	email:
-		on_success: change
-		on_failure: change
