@@ -36,10 +36,14 @@ You can use the `heatMap` function to get an heat map (raster image and/or conto
 #### netMap
 You can use `netMap` to map spatial networks from an `igraph` object. For example we can create a network of pumps in Snow's London by connecting pumps which are geographically close. Note that you need to set explicitly geographical coordinates to the graph vertices with the `lat` and `lon` attributes.
 
+    library(igraph)
+    library(sp)
+    
     pump.adj <- as.matrix(dist(coordinates(cholera$pumps)))
     pump.graph <- graph.adjacency(pump.adj < 0.003, diag = FALSE)
     V(pump.graph)$lat <- coordinates(cholera$pumps)[, 2]
     V(pump.graph)$lon <- coordinates(cholera$pumps)[, 1]
+    
     netMap(pump.graph, v.size=5, width=500, height=300)
 
 ![netmap](https://cloud.githubusercontent.com/assets/9269625/7374270/854e9046-edd1-11e4-956d-f9e7c6e63696.png)
